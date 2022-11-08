@@ -84,4 +84,15 @@ def jeu(paramètre):
 #envoyer le message indiquant le caractère trouvé en utilisant la fonction du jeu
 print("caractère trouvé : " +jeu ("h"))
 
+
+prenom ="mathias"
+
+nom = "lipko"
+
+identite = nom+prenom #retourne "mathiaslipko"
+
+identite = nom + ' ' + prenom #retourne "mathias lipko"
+
+integerValue = 342 #retourne 342
+stringIntegerValue = str(342) #retourne "342"
 #FIN 
