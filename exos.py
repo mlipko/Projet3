@@ -98,21 +98,42 @@ stringIntegerValue = str(342) #retourne "342"
 
 #Exercice 1
 #Faire une fonction qui concatene 2 chaines de caractère, les séparant par une virgule
+#definir une fonction de concatenation qui possède les deux paramètres a concatener
 def concatene(str1, str2):
-    if str1=="":
-        return str2
+    #je m'assure que str1 soit bien de type str
+    stringnified1 = str(str1)
+    #je m'assure que str2 soit bien de type str
+    stringnified2 = str(str2)
+    #renvoyer les deux valeurs séparés par la
     return str1 + ", " + str2
 
 #Exercide 2
 #Faire une fonction qui itere sur tous les index d'un tableau renvoyant une chaine de caractère avec l'ensemble de l'occurance d'un chiffre e.g.:
-#Pour tableau = [0, 1, 1, 1, 0, 1, 1, 0, 1]
-#La fonction(tableau, 0) doit renvoyer "0, 4, 7" n'hésitez pas à utiliser la première fonction
-def showAllIndexes(tbl, nb):
-    string = ""
-    for i in range(len(tbl)):
-        if tbl[i]==nb:
-            string=concatene(string, str(i))
-    return string
+    #Pour tableau = [0, 1, 1, 1, 0, 1, 1, 0, 1]
+
+tableau = [0, 1, 1, 1, 0, 1, 1, 0, 1]
+    #La fonction(tableau, 0) doit renvoyer "0, 4, 7" n'hésitez pas à utiliser la première fonction
+def findIndex(tableau, x):
+    #définir i un index de depart
+    i = 0
+    #définir chaineRetour telle qu'une chaine de caractere vide
+    chaineRetour = ''
+    #Tant que i est different du nombre d'elt dans le tableau
+    while i != len(tableau):
+        #alors j'attribue a une variable la valeur de tableau à l'index i
+        selected = tableau[i]
+        #je défini un booleen tel que firstTurn est true
+        #Si selected est egal a x ET que firstTurn est true
+            #Alors on assigne a la chaineRetour le retour de str(i)
+            #changer la valeur de firstTurn a false
+        #sinon si selected est egal à x
+        if selected == x:
+            #alors j'assigne le retour de concatWithComma tel que :
+            chaineRetour = concatWithComma(chaineRetour, i)
+        #j'incrémente i de 1
+        i = i + 1
+    #retourner la chaine retour
+    return chaineRetour
 
 #exercice 3
 #Renvoyer/afficher un message
@@ -120,6 +141,10 @@ def show(*args):
     print(*args)
 
 show(concatene("Hello", "World"))
-show(showAllIndexes([0, 1, 1, 1, 0, 1, 1, 0, 1], 0))
+
+#definir une fonction permettant d'afficher la suite de fibonnaci ayant pour paramètre la valeur de départ
+    #creer une variable nouveau nombre egal au double de la valeur de départ
+    #tant que x n'est pas égal a 10
+        #mettre nouveau nombre à nouveau nombre 
 
 #FIN 
