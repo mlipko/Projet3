@@ -95,4 +95,31 @@ identite = nom + ' ' + prenom #retourne "mathias lipko"
 
 integerValue = 342 #retourne 342
 stringIntegerValue = str(342) #retourne "342"
+
+#Exercice 1
+#Faire une fonction qui concatene 2 chaines de caractère, les séparant par une virgule
+def concatene(str1, str2):
+    if str1=="":
+        return str2
+    return str1 + ", " + str2
+
+#Exercide 2
+#Faire une fonction qui itere sur tous les index d'un tableau renvoyant une chaine de caractère avec l'ensemble de l'occurance d'un chiffre e.g.:
+#Pour tableau = [0, 1, 1, 1, 0, 1, 1, 0, 1]
+#La fonction(tableau, 0) doit renvoyer "0, 4, 7" n'hésitez pas à utiliser la première fonction
+def showAllIndexes(tbl, nb):
+    string = ""
+    for i in range(len(tbl)):
+        if tbl[i]==nb:
+            string=concatene(string, str(i))
+    return string
+
+#exercice 3
+#Renvoyer/afficher un message
+def show(*args):
+    print(*args)
+
+show(concatene("Hello", "World"))
+show(showAllIndexes([0, 1, 1, 1, 0, 1, 1, 0, 1], 0))
+
 #FIN 
