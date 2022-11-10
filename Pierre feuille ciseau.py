@@ -23,8 +23,6 @@
     #Sinon si choixJoueur est égal à pierre et choixOrdi est égal à ciseau
         #alors incrémenter scoreJoueur de 1
         #retourner "l'ordi a gagné"
-    
-
 #Definir une fonction "jeu" permettant de lancer la partie de pierre feuille ciseau avec en paramètre le choix du joueur
     #enregistrer dans la variable choix de l'ordi un élèment aléatoire du tableau grace à un nombre aléatoire entre 0 et 2
     #recuperer dans la fonction des règles le gagnant, le perdant ou l'égalité
