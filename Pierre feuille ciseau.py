@@ -30,7 +30,7 @@
     #recuperer dans la fonction des règles le gagnant, le perdant ou l'égalité
     #retourner le choix du joueur, de l'ordi et le gagnant
 
-#initialisation d'une variable permettant de relancer la partie
+#initialisation d'une variable "rejouer" permettant de relancer la partie
 #Tans que rejouer n'est pas égal à "non":
     #Alors selection d'un élèment aléatoire dans le tableau
     #Demander le choix du joueur et le stocker dans une variable choix
