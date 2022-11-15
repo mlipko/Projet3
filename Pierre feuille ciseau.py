@@ -27,7 +27,8 @@ def jeu (choix):
 rejouer = 0
 choix = 0
 
-while rejouer == 0:
+while rejouer != "oui":
+    rejouer = 0
     choix = input("\nFait ton choix \npierre, feuille, ciseau\n")
     choixIA = tableau[random.randint(0, 2)]
     if regles(choix, choixIA) == "tu as gagné!":
@@ -37,5 +38,12 @@ while rejouer == 0:
     print(jeu(choix)+ "\n=====================\n Ton score : " + str(scoreJoueur) + "\n scoreOrdi " + str(scoreOrdi)+"\n=====================")
     if scoreJoueur == 3 :
         print("Tu as gagné, félicitation!")
+        scoreOrdi=0
+        scoreJoueur=0
+        break
     elif scoreOrdi == 3:
         print("L'ordi à gagné, dommage...")
+        scoreOrdi=0
+        scoreJoueur=0
+        break
+    
